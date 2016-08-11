@@ -1,8 +1,8 @@
 // @flow
 
 type doneT = {
-  (): void,
-  fail: () => void
+  ():void,
+  fail:() => void
 };
 
 declare function describe (name:string, fn:() => void):void;
@@ -22,22 +22,28 @@ type expectation = {
   toBe:(actual:mixed) => void,
   toBeNull:() => void,
   toHaveBeenCalledOnceWith:(...rest:mixed[]) => void,
+  toHaveBeenCalledWith:(...rest:mixed[]) => void,
   toHaveBeenCalled:() => void,
-  toHaveClass:(expected:string) => void
+  toHaveClass:(expected:string) => void,
+  toHaveBeenCalledOnce:() => void
 };
 
 declare var jasmine:Jasmine;
 declare class Jasmine {
+  any(t:any):any;
   clock(): {
-    install: () => void,
-    uninstall: () => void,
-    tick: (ms:number) => void
+    install:() => void,
+    uninstall:() => void,
+    tick:(ms:number) => void
   };
-  createSpy(name:string): {
-    and: {
-      returnValue: (val:mixed) => Jasmine,
-      callFake: (fn:(...rest:mixed[]) => mixed) => Jasmine,
-      callThrough: () => Jasmine
-    }
-  };
+  createSpy(name:string):spy
 }
+
+type spy = {
+  (...rest:any[]):any,
+  and:{
+    returnValue:(val:mixed) => spy,
+    callFake:(fn:(...rest:mixed[]) => any) => spy,
+    callThrough:() => spy
+  }
+};
