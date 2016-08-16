@@ -25,7 +25,9 @@ type expectation = {
   toHaveBeenCalledWith:(...rest:mixed[]) => void,
   toHaveBeenCalled:() => void,
   toHaveClass:(expected:string) => void,
-  toHaveBeenCalledOnce:() => void
+  toHaveBeenCalledOnce:() => void,
+  toThrow:(err:Error | Class<Error>) => void,
+  toThrowError:(err:Error | Class<Error>, msg:string) => void
 };
 
 declare var jasmine:Jasmine;
