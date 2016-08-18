@@ -12,6 +12,7 @@ declare function beforeEach (fn:() => void):void;
 declare function beforeEachAsync (fn:() => Promise<mixed>):void;
 declare function afterEach (fn:() => void):void;
 declare function it (name:string, fn:(done:doneT) => void):void;
+declare function itAsync (name:string, fn:() => Promise<mixed>):void;
 declare function fit (name:string, fn:(done:doneT) => void):void;
 declare function xit (name:string, fn:(done:doneT) => void):void;
 declare function expect (expected:mixed):expectation;
@@ -22,6 +23,8 @@ type expectation = {
   toBe:(actual:mixed) => void,
   toBeNull:() => void,
   toHaveBeenCalledOnceWith:(...rest:mixed[]) => void,
+  toHaveBeenCalledTwiceWith:(...rest:mixed[]) => void,
+  toHaveBeenCalledNTimesWith:(times:number, ...rest:mixed[]) => void,
   toHaveBeenCalledWith:(...rest:mixed[]) => void,
   toHaveBeenCalled:() => void,
   toHaveClass:(expected:string) => void,
@@ -49,3 +52,5 @@ type spy = {
     callThrough:() => spy
   }
 };
+
+export type spyT = spy;
