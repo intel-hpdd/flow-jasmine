@@ -1,6 +1,6 @@
 {
   "name": "intel-flow-jasmine",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "flow-type declarations for jasmine",
   "scripts": {
     "eslint": "eslint ./"
