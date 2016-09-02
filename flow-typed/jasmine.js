@@ -8,14 +8,15 @@ type doneT = {
 declare function describe (name:string, fn:() => void):void;
 declare function fdescribe (name:string, fn:() => void):void;
 declare function xdescribe (name:string, fn:() => void):void;
-declare function beforeEach (fn:() => void):void;
+declare function beforeEach (fn:(done:doneT) => void):void;
 declare function beforeEachAsync (fn:() => Promise<mixed>):void;
-declare function afterEach (fn:() => any):void;
+declare function afterEach (fn:(done:doneT) => any):void;
 declare function it (name:string, fn:(done:doneT) => void):void;
 declare function itAsync (name:string, fn:() => Promise<mixed>):void;
 declare function fit (name:string, fn:(done:doneT) => void):void;
 declare function xit (name:string, fn:(done:doneT) => void):void;
 declare function expect (expected:mixed):expectation;
+declare function spyOn (fn:any, name:string):spy;
 
 type expectation = {
   not:expectation,

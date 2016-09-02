@@ -40,3 +40,10 @@ spy4.and.callThrough();
 //should pass
 const spy5 = jasmine.createSpy('blap');
 spy5.and.returnValue('moose');
+
+//should pass
+const foo = {
+  bar () {}
+};
+const spy6 = spyOn(foo, 'bar');
+spy6.and.callThrough();
