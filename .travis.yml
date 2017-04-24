@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- 6
+cache: yarn
+script:
+    - yarn run eslint
+deploy:
+  provider: npm
+  email: joe.grund@intel.com
+  api_key:
+    secure: JumdUzL9ge6BjWSWQpbhu6AsZzZizcnktSQlxprVHic0z5c7O0S+IZHUrasOa+rzXeePe7uTT21EkPDuWJXiH+A1s4tjIAVrNV7DquYzFAzKnMLooXj0Gx9y361CGsV0HzfvutPDrxc3aIGO+6My+ND1gtMkhDoIkjoarsk/vSwLsXIiCMNk0jl/cFWcpByCSrnTHeH2m/oWiiwVXG9FW/Lrkf/jKKmMYLJS28qMi8cnMvRow/JiuXb6vrMhxSQ4YMXspc93+X4Pc5/Dgp92WsYeh9UEGoU9454sPDavV6nVNWrXdfvZzroY9TtmHMTR2+O9VvIypFOGuKx38L3iVqwKszIyMxlpNAI7wHMW0WcRqj7kWbw/45F0pQKvUJX8psrAWehj+y0LP6OnU2AfhkOaIUaEP6R3qW4bDC/BBf1zDvA11I7gde1JYY/P3fiLZz8lWKnM3yFO1r+RO8FCFQIFvMHbOm4WplIaU0lIeshrRLI5y0cPdaqi+1JG1rxDgWd9fQaHmmh6Ja+XzO+maWkdgu9+LjLMpeom0ZkWgSE2KOJ2KU8UD+Qsx9oTr4jZNhxjZ16XDwit0HAoAQT2ALHq5UgqP7EaKHTag6LjcGCxc5QcDqvYbp01fjqauZP+CIm/fmzr0CIjOMZsmPpS2cxFDwByR8f8QdoEsE3NhlU=
+  on:
+    tags: true
+    repo: intel-hpdd/flow-jasmine
+    branch: master
