@@ -1,21 +1,21 @@
 {
-  "name": "intel-flow-jasmine",
+  "name": "@mfl/flow-jasmine",
   "version": "1.5.0",
   "description": "flow-type declarations for jasmine",
   "scripts": {
     "eslint": "eslint ./"
   },
   "publishConfig": {
-    "registry": "https://ubit-artifactory-or.intel.com/artifactory/api/npm/iml-npm-local"
+    "access": "public"
   },
   "pre-commit": [
     "eslint"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.intel.com:IML/flow-jasmine.git"
+    "url": "git@github.com:intel-hpdd/flow-jasmine.git"
   },
-  "author": "IML Team",
+  "author": "MFL Team",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "6.14.0",
