@@ -5,6 +5,12 @@ describe('my fake suite', () => {
 
   });
 
+  beforeEach(async () => {
+    await new Promise((res) => {
+      res(3);
+    });
+  });
+
   afterEach(() => {
 
   });
@@ -15,6 +21,10 @@ describe('my fake suite', () => {
 
   fit('should be awesome', () => {
     expect('this').toEqual('this');
+  });
+
+  it('should work async', async () => {
+    await new Promise((res) => res(4));
   });
 });
 
