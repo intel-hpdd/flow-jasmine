@@ -1,5 +1,4 @@
 [ignore]
-.*\(lib\|test\|builtin-modules\|binary-extensions\|faker\|spdx\).*\.json
 
 [include]
 
@@ -7,3 +6,4 @@
 
 [options]
 experimental.strict_type_args=true
+suppress_comment=\\(.\\|\n\\)*\\$ExpectError
