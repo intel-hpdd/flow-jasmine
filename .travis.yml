@@ -4,6 +4,7 @@ node_js:
 cache: yarn
 script:
 - yarn run eslint
+- yarn run flow
 deploy:
   provider: npm
   email: joe.grund@intel.com

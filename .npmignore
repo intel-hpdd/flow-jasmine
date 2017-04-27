@@ -3,6 +3,5 @@ node_modules
 .editorconfig
 .eslintrc
 .flowconfig
-.babelrc
 .gitignore
 /test
