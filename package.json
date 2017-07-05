@@ -1,5 +1,5 @@
 {
-  "name": "@mfl/flow-jasmine",
+  "name": "@iml/flow-jasmine",
   "version": "1.6.1",
   "description": "flow-type declarations for jasmine",
   "scripts": {
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git@github.com:intel-hpdd/flow-jasmine.git"
   },
-  "author": "MFL Team",
+  "author": "IML Team",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "7.2.3",
