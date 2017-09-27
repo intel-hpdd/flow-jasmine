@@ -20,7 +20,7 @@
   "author": "IML Team",
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "7.2.3",
+    "babel-eslint": "8.0.1",
     "eslint": "^4.5.0",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-flowtype": "^2.35.0",
